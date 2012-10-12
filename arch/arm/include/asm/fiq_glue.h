@@ -17,7 +17,7 @@
 struct fiq_glue_handler {
 	void (*fiq)(struct fiq_glue_handler *h, void *regs, void *svc_sp);
 	void (*resume)(struct fiq_glue_handler *h);
-};
+} __no_const;
 
 int fiq_glue_register_handler(struct fiq_glue_handler *handler);
 

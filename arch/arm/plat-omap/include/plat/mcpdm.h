@@ -23,6 +23,6 @@
 
 struct omap_mcpdm_platform_data {
 	bool (*was_context_lost)(struct device *dev);
-};
+} __no_const;
 
 #endif

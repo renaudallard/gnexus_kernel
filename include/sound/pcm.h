@@ -80,8 +80,8 @@ struct snd_pcm_ops {
 			     unsigned long offset);
 	int (*mmap)(struct snd_pcm_substream *substream, struct vm_area_struct *vma);
 	int (*ack)(struct snd_pcm_substream *substream);
-};
-typedef struct snd_pcm_ops __no_const snd_pcm_ops_no_const;
+} __no_const;
+typedef struct snd_pcm_ops snd_pcm_ops_no_const;
 
 /*
  *
