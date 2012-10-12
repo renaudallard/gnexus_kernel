@@ -2137,6 +2137,8 @@ static int do_tcp_setsockopt(struct sock *sk, int level,
 	int val;
 	int err = 0;
 
+	pax_track_stack();
+
 	/* These are data/string values, all the others are ints */
 	switch (optname) {
 	case TCP_CONGESTION: {
@@ -2515,6 +2517,8 @@ static int do_tcp_getsockopt(struct sock *sk, int level,
 	struct inet_connection_sock *icsk = inet_csk(sk);
 	struct tcp_sock *tp = tcp_sk(sk);
 	int val, len;
+
+	pax_track_stack();
 
 	if (get_user(len, optlen))
 		return -EFAULT;
