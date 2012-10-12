@@ -269,11 +269,6 @@ int plugin_init(struct plugin_name_args *plugin_info, struct plugin_gcc_version 
 		.pos_op				= PASS_POS_INSERT_AFTER
 	};
 
-	if (!plugin_default_version_check(version, &gcc_version)) {
-		error(G_("incompatible gcc/plugin versions"));
-		return 1;
-	}
-
 	for (i = 0; i < argc; ++i) {
 		if (!(strcmp(argv[i].key, "no-constify"))) {
 			constify = false;
