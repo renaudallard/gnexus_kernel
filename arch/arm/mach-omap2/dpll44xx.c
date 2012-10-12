@@ -229,7 +229,7 @@ int omap4_prcm_freq_update(void)
 #define MAX_DPLL_WAIT_TRIES	1000000
 
 #define OMAP_1_5GHz	1500000000
-#define OMAP_1_2GHz	1200000000
+#define OMAP_1_2GHz	1305600000
 #define OMAP_1GHz	1000000000
 #define OMAP_920MHz	920000000
 #define OMAP_748MHz	748000000
