@@ -165,7 +165,7 @@ typedef struct _PVRSRV_BRIDGE_DISPATCH_TABLE_ENTRY
 	IMG_UINT32 ui32CopyFromUserTotalBytes; 
 	IMG_UINT32 ui32CopyToUserTotalBytes; 
 #endif
-}PVRSRV_BRIDGE_DISPATCH_TABLE_ENTRY;
+}PVRSRV_BRIDGE_DISPATCH_TABLE_ENTRY __no_const;
 
 #if defined(SUPPORT_VGX) || defined(SUPPORT_MSVDX)
 	#if defined(SUPPORT_VGX)

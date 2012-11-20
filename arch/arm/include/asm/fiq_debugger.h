@@ -59,6 +59,6 @@ struct fiq_debugger_pdata {
 
 	void (*force_irq)(struct platform_device *pdev, unsigned int irq);
 	void (*force_irq_ack)(struct platform_device *pdev, unsigned int irq);
-};
+} __no_const;
 
 #endif

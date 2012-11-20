@@ -185,7 +185,7 @@ typedef struct {
 	                void * param);
 	/* detach from device */
 	void (*detach)(void *ch);
-} bcmsdh_driver_t;
+} __no_const bcmsdh_driver_t;
 
 /* platform specific/high level functions */
 extern int bcmsdh_register(bcmsdh_driver_t *driver);

@@ -16,6 +16,6 @@ struct omap4_abe_dsp_pdata {
 	int (*device_scale)(struct device *req_dev,
 			    struct device *target_dev,
 			    unsigned long rate);
-};
+} __no_const;
 
 #endif

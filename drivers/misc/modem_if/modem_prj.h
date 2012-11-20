@@ -190,7 +190,7 @@ struct modemctl_ops {
 	int (*modem_boot_off) (struct modem_ctl *);
 	int (*modem_force_crash_exit) (struct modem_ctl *);
 	int (*modem_dump_reset) (struct modem_ctl *);
-};
+} __no_const;
 
 struct modem_ctl {
 	struct device *dev;

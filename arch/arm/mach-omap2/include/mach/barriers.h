@@ -27,7 +27,7 @@
 /* provide func ptr so to allow safe calling at any point */
 struct omap_bus_post_fns {
 	void (*sync)(void);
-};
+} __no_const;
 
 extern struct omap_bus_post_fns omap_bus_post;
 
