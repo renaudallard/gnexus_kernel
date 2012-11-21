@@ -503,7 +503,7 @@ CONFIG_NEON=y
 #
 CONFIG_BINFMT_ELF=y
 CONFIG_HAVE_AOUT=y
-CONFIG_BINFMT_MISC=y
+# CONFIG_BINFMT_MISC is not set
 
 #
 # Power management options
