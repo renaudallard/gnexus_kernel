@@ -1,6 +1,6 @@
 #
 # Automatically generated make config: don't edit
-# Linux/arm 3.0.53 Kernel Configuration
+# Linux/arm 3.0.54 Kernel Configuration
 #
 CONFIG_ARM=y
 CONFIG_HAVE_PWM=y
@@ -2701,7 +2701,9 @@ CONFIG_PAX_HAVE_ACL_FLAGS=y
 #
 # Non-executable pages
 #
-# CONFIG_PAX_NOEXEC is not set
+CONFIG_PAX_NOEXEC=y
+CONFIG_PAX_PAGEEXEC=y
+# CONFIG_PAX_MPROTECT is not set
 
 #
 # Address Space Layout Randomization
@@ -2713,7 +2715,7 @@ CONFIG_PAX_RANDMMAP=y
 #
 # Miscellaneous hardening features
 #
-CONFIG_PAX_MEMORY_SANITIZE=y
+# CONFIG_PAX_MEMORY_SANITIZE is not set
 CONFIG_PAX_USERCOPY=y
 # CONFIG_KEYS is not set
 CONFIG_SECURITY_DMESG_RESTRICT=y
