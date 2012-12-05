@@ -332,7 +332,7 @@ module_param(dhd_console_ms, uint, 0644);
 /* Controls Status off wiffi Power on SleepMode
    sys/module/bcmdhd/parameters/uiFastWifi      */
 #if defined(CONFIG_HAS_EARLYSUSPEND)
-uint uiFastWifi = 1;
+uint uiFastWifi = 0;
 module_param(uiFastWifi, uint, 0664);
 #endif /* defined(CONFIG_HAS_EARLYSUSPEND) */
 
