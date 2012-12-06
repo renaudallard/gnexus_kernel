@@ -93,12 +93,16 @@ L_div_64_64:
 	subs	D_1, D_0, #32
 	rsb	ip, D_0, #32
 	movmi	B_1, B_1, lsl D_0
-	orrmi	B_1, B_1, B_0, lsr ip
+ARM(	orrmi	B_1, B_1, B_0, lsr ip	)
+THUMB(	lsrmi	A_0, B_0, ip	)
+THUMB(	orrmi	B_1, B_1, A_0	)
 	movpl	B_1, B_0, lsl D_1
 	mov	B_0, B_0, lsl D_0
 	@ C = 1 << (clz B - clz A)
 	movmi	C_1, C_1, lsl D_0
-	orrmi	C_1, C_1, C_0, lsr ip
+ARM(	orrmi	C_1, C_1, C_0, lsr ip	)
+THUMB(	lsrmi	A_0, C_0, ip	)
+THUMB(	orrmi	C_1, C_1, A_0	)
 	movpl	C_1, C_0, lsl D_1
 	mov	C_0, C_0, lsl D_0
 L_done_shift:
@@ -165,7 +169,9 @@ L_pow2:
 	add	D_0, D_0, #32
 L_1:
 	movpl	A_0, A_0, lsr D_0
-	orrpl	A_0, A_0, A_1, lsl D_1
+ARM(	orrpl	A_0, A_0, A_1, lsl D_1	)
+THUMB(	lslpl	B_0, A_1, D_1	)
+THUMB(	orrpl	A_0, A_0, B_0	)
 	mov	A_1, A_1, lsr D_0
 	@ Mov back C to R
 	mov	R_0, C_0
