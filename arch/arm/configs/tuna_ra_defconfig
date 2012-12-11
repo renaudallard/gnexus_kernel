@@ -1,6 +1,6 @@
 #
 # Automatically generated make config: don't edit
-# Linux/arm 3.0.54 Kernel Configuration
+# Linux/arm 3.0.56 Kernel Configuration
 #
 CONFIG_ARM=y
 CONFIG_HAVE_PWM=y
@@ -2150,7 +2150,7 @@ CONFIG_TWL6030_USB=y
 CONFIG_MMC=y
 # CONFIG_MMC_DEBUG is not set
 CONFIG_MMC_UNSAFE_RESUME=y
-# CONFIG_MMC_CLKGATE is not set
+CONFIG_MMC_CLKGATE=y
 CONFIG_MMC_EMBEDDED_SDIO=y
 CONFIG_MMC_PARANOID_SD_INIT=y
 
