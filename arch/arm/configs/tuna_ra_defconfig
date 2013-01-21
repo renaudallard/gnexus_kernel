@@ -1,6 +1,6 @@
 #
 # Automatically generated make config: don't edit
-# Linux/arm 3.0.57 Kernel Configuration
+# Linux/arm 3.0.59 Kernel Configuration
 #
 CONFIG_ARM=y
 CONFIG_HAVE_PWM=y
@@ -2533,6 +2533,7 @@ CONFIG_STACKTRACE=y
 # CONFIG_DEBUG_SG is not set
 # CONFIG_DEBUG_NOTIFIERS is not set
 # CONFIG_DEBUG_CREDENTIALS is not set
+CONFIG_FRAME_POINTER=y
 # CONFIG_BOOT_PRINTK_DELAY is not set
 # CONFIG_RCU_TORTURE_TEST is not set
 CONFIG_RCU_CPU_STALL_TIMEOUT=60
@@ -2580,7 +2581,7 @@ CONFIG_HAVE_ARCH_KGDB=y
 # CONFIG_KGDB is not set
 # CONFIG_TEST_KSTRTOX is not set
 CONFIG_STRICT_DEVMEM=y
-CONFIG_ARM_UNWIND=y
+# CONFIG_ARM_UNWIND is not set
 CONFIG_DEBUG_USER=y
 # CONFIG_DEBUG_LL is not set
 # CONFIG_OC_ETM is not set
