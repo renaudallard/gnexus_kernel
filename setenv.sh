@@ -1,8 +1,10 @@
 #!/bin/sh
 export VENDOR=fugu
 export ARCH=arm 
-export TOOLCHAIN=~/android-ndk-r8d/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86
-export TOOLPREFIX=arm-linux-androideabi
+export TOOLCHAIN=~/x-tools/arm-${VENDOR}-linux-gnueabi
+export TOOLPREFIX=arm-${VENDOR}-linux-gnueabi
+#export TOOLCHAIN=~/android-ndk-r8d/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86
+#export TOOLPREFIX=arm-linux-androideabi
 export PATH=$PATH:${TOOLCHAIN}/bin:/usr/java/jdk1.6.0_21/bin
 export CROSS_COMPILE=${TOOLCHAIN}/bin/${TOOLPREFIX}-
 export CC=${TOOLCHAIN}/bin/${TOOLPREFIX}-gcc
