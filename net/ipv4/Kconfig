@@ -592,6 +592,9 @@ choice
 	config DEFAULT_RENO
 		bool "Reno"
 
+	config DEFAULT_YEAH
+		bool "Yeah" if TCP_CONG_YEAH=y
+
 endchoice
 
 endif
@@ -611,6 +614,7 @@ config DEFAULT_TCP_CONG
 	default "westwood" if DEFAULT_WESTWOOD
 	default "veno" if DEFAULT_VENO
 	default "reno" if DEFAULT_RENO
+	default "yeah" if DEFAULT_YEAH
 	default "cubic"
 
 config TCP_MD5SIG
