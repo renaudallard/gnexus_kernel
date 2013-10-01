@@ -20,7 +20,7 @@ else
         zip -q -r ${HOME}/kernel${RELV}.zip boot.img META-INF || exit 1
         sha256sum ${HOME}/kernel${RELV}.zip > ${HOME}/kernel${RELV}.zip.sha256sum
 
-	scp ${HOME}/kernel* elendil.arnor.org:public_html/galaxy_nexus/testing-${RAMV}/
+	scp ${HOME}/kernel* isildur.arnor.org:public_html/galaxy_nexus/testing-${RAMV}/
 
 	cd ..
 	rm new_initramfs.cpio.lzo cwm/boot.img ${HOME}/kernel*
